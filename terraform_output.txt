@@ -1,0 +1,149 @@
+# Initializing Terraform...
+Initializing the backend...
+
+# Initializing provider plugins...
+- Downloading plugin for provider "google" (hashicorp/google) 4.7.0...
+- Downloading plugin for provider "aws" (hashicorp/aws) 3.66.0...
+- Terraform has been successfully initialized!
+
+random_id.node_id[0]: Creating...
+random_id.node_id[3]: Creating...
+random_id.node_id[6]: Creating...
+random_id.node_id[8]: Creating...
+random_id.node_id[2]: Creating...
+random_id.node_id[7]: Creating...
+random_id.node_id[9]: Creating...
+random_id.node_id[1]: Creating...
+random_id.node_id[4]: Creating...
+random_id.node_id[5]: Creating...
+random_id.node_id[3]: Creation complete after 0s [id=i9wi]
+random_id.node_id[9]: Creation complete after 0s [id=abpC]
+random_id.node_id[0]: Creation complete after 0s [id=3gSD]
+random_id.node_id[6]: Creation complete after 0s [id=2IKa]
+random_id.node_id[2]: Creation complete after 0s [id=JlGt]
+random_id.node_id[8]: Creation complete after 0s [id=Xm8c]
+random_id.node_id[7]: Creation complete after 0s [id=jZPa]
+random_id.node_id[5]: Creation complete after 0s [id=JXNT]
+random_id.node_id[1]: Creation complete after 0s [id=I5Bw]
+random_id.node_id[4]: Creation complete after 0s [id=goXO]
+random_region_zone.google[1]: Creating...
+random_region_zone.google[2]: Creating...
+random_region_zone.google[3]: Creating...
+random_region_zone.google[4]: Creating...
+random_region_zone.google[0]: Creating...
+random_region_zone.google[3]: Creation complete after 0s [id=asia-east1/asia-east1-a]
+random_region_zone.google[2]: Creation complete after 0s [id=europe-west2/europe-west2-c]
+random_region_zone.google[4]: Creation complete after 0s [id=australia-southeast1/australia-southeast1-b]
+random_region_zone.google[0]: Creation complete after 0s [id=us-east1/us-east1-c]
+random_region_zone.google[1]: Creation complete after 0s [id=us-central1/us-central1-b]
+random_region_zone.aws[1]: Creating...
+random_region_zone.aws[2]: Creating...
+random_region_zone.aws[3]: Creating...
+random_region_zone.aws[0]: Creating...
+random_region_zone.aws[4]: Creating...
+random_region_zone.aws[0]: Creation complete after 0s [id=us-east-1/us-east-1a]
+random_region_zone.aws[2]: Creation complete after 0s [id=eu-west-1/eu-west-1c]
+random_region_zone.aws[1]: Creation complete after 0s [id=us-west-2/us-west-2c]
+random_region_zone.aws[4]: Creation complete after 0s [id=ap-northeast-1/ap-northeast-1d]
+random_region_zone.aws[3]: Creation complete after 0s [id=ap-southeast-1/ap-southeast-1b]
+aws_instance.aws_instance[4]: Creating...
+aws_instance.aws_instance[1]: Creating...
+aws_instance.aws_instance[0]: Creating...
+aws_instance.aws_instance[2]: Creating...
+aws_instance.aws_instance[3]: Creating...
+google_compute_instance.gcp_instance[3]: Creating...
+google_compute_instance.gcp_instance[2]: Creating...
+google_compute_instance.gcp_instance[4]: Creating...
+google_compute_instance.gcp_instance[0]: Creating...
+google_compute_instance.gcp_instance[1]: Creating...
+aws_instance.aws_instance[0]: Still creating... [10s elapsed]
+google_compute_instance.gcp_instance[1]: Still creating... [10s elapsed]
+google_compute_instance.gcp_instance[4]: Still creating... [10s elapsed]
+google_compute_instance.gcp_instance[0]: Still creating... [10s elapsed]
+aws_instance.aws_instance[4]: Still creating... [10s elapsed]
+aws_instance.aws_instance[3]: Still creating... [10s elapsed]
+google_compute_instance.gcp_instance[3]: Still creating... [10s elapsed]
+google_compute_instance.gcp_instance[2]: Still creating... [10s elapsed]
+aws_instance.aws_instance[1]: Still creating... [10s elapsed]
+aws_instance.aws_instance[2]: Still creating... [10s elapsed]
+aws_instance.aws_instance[0]: Creation complete after 12s [id=i-0123456789abcdef0]
+aws_instance.aws_instance[2]: Creation complete after 12s [id=i-0123456789abcdef2]
+aws_instance.aws_instance[4]: Creation complete after 12s [id=i-0123456789abcdef4]
+aws_instance.aws_instance[3]: Creation complete after 12s [id=i-0123456789abcdef3]
+aws_instance.aws_instance[1]: Creation complete after 12s [id=i-0123456789abcdef1]
+google_compute_instance.gcp_instance[1]: Creation complete after 12s [id=node-2NkD]
+google_compute_instance.gcp_instance[4]: Creation complete after 12s [id=node-0WqF]
+google_compute_instance.gcp_instance[2]: Creation complete after 12s [id=node-3T7H]
+google_compute_instance.gcp_instance[0]: Creation complete after 12s [id=node-0JVF]
+google_compute_instance.gcp_instance[3]: Creation complete after 12s [id=node-7L9A]
+
+Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+node_details = {
+  aws_instances = [
+    {
+      "cloud_provider" = "AWS"
+      "node_id" = "i-0123456789abcdef0"
+      "region" = "us-east-1"
+      "zone" = "us-east-1a"
+    },
+    {
+      "cloud_provider" = "AWS"
+      "node_id" = "i-0123456789abcdef1"
+      "region" = "us-east-1"
+      "zone" = "us-east-1c"
+    },
+    {
+      "cloud_provider" = "AWS"
+      "node_id" = "i-0123456789abcdef2"
+      "region" = "eu-west-1"
+      "zone" = "eu-west-1c"
+    },
+    {
+      "cloud_provider" = "AWS"
+      "node_id" = "i-0123456789abcdef3"
+      "region" = "ap-southeast-1"
+      "zone" = "ap-southeast-1b"
+    },
+    {
+      "cloud_provider" = "AWS"
+      "node_id" = "i-0123456789abcdef4"
+      "region" = "ap-northeast-1"
+      "zone" = "ap-northeast-1d"
+    },
+  ]
+  gcp_instances = [
+    {
+      "cloud_provider" = "GCP"
+      "node_id" = "node-0JVF"
+      "region" = "us-east1"
+      "zone" = "us-east1-c"
+    },
+    {
+      "cloud_provider" = "GCP"
+      "node_id" = "node-2NkD"
+      "region" = "us-central1"
+      "zone" = "us-central1-b"
+    },
+    {
+      "cloud_provider" = "GCP"
+      "node_id" = "node-3T7H"
+      "region" = "europe-west2"
+      "zone" = "europe-west2-c"
+    },
+    {
+      "cloud_provider" = "GCP"
+      "node_id" = "node-7L9A"
+      "region" = "asia-east1"
+      "zone" = "asia-east1-a"
+    },
+    {
+      "cloud_provider" = "GCP"
+      "node_id" = "node-0WqF"
+      "region" = "australia-southeast1"
+      "zone" = "australia-southeast1-b"
+    },
+  ]
+}
