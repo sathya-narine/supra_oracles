@@ -1,4 +1,12 @@
 Take Away Assessment
+
+Task 1
+
+* pip install paramiko
+* Please provide/change the credentials of the nodes in node_monitoring.py
+* In order to get the real time notification the script has to be continously kept running.
+* python node_monitoring.py
+  
 Task 2
 * Install the terraform on ubuntu , check with terraform --version
 * Create AWS access for terraform
