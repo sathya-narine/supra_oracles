@@ -12,8 +12,9 @@ Task 2
 * commands to run
     * terraform init (Initializes & gets the details of the provider).
     * terraform validate (to check for the syntax of the teraform script).
-    * terraform plan(to see what resources are being created from this teraform script)
-    * terraform apply. (type yes and this creates the resources)
+    * terraform plan (to see what resources are being created from this teraform script).
+    * terraform apply (type yes and this creates the resources).
+      
 Task 3 
 
 * network_monitor.sh needs have execute permission(chomd +x network_monitor.sh).
