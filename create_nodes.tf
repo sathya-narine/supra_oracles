@@ -1,7 +1,7 @@
 # defining the provider for Google Cloud Platform (GCP)
 provider "google" {
   credentials = file("/home/sathya/supra_oracles/credentials.json")  # path to GCP service account key file
-  project     = "task2-tf-921"  # GCP project ID
+  project     = "psychic-raceway-415521"  # GCP project ID
   region      = "us-central1"  # default region of GCP instances
 }
 
@@ -22,14 +22,24 @@ resource "google_compute_instance" "gcp_instance" {
   name         = "node-${random_id.node_id[count.index].hex}"  # generates a unique name for each instance
   machine_type = "n1-standard-1"
   zone         = random_region_zone.google[count.index].result  # randomly choose a zone for each instance
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-9"
+    }
+  }
+  network_interface {
+    #  network name or self_link
+    network = "default"
+    # (Optional) can configure additional network interface settings here if needed
+  }
 
 }
 
 # defining the AWS instances
-resource "aws_instance" "aws_instance" {
+resource "aws_instance" "web" {
   count         = 5
-  ami           = "ami-12345678"  # specify AMI ID for AWS linux instances
-  instance_type = "t2.micro"
+  ami           = "ami-02ca28e7c7b8f8be1"  # specify AMI ID for AWS linux instances
+  instance_type = "t2.small"
   availability_zone = random_region_zone.aws[count.index].result  # randomly choose an availability zone for each instance
 
   # right now just using default security group
